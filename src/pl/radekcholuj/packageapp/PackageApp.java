@@ -10,7 +10,6 @@ public class PackageApp {
 
         Package<Shoes> shoesPackage = null;
         Package<Flour> flourPackage = null;
-        Package<Cat> catPackage = null;
 
         int option;
         do {
@@ -25,29 +24,26 @@ public class PackageApp {
                     scanner.nextLine();
                     switch (option) {
                         case 1:
+                            System.out.print("price: ");
+                            double price = scanner.nextInt();
                             System.out.print("brand: ");
                             String brand = scanner.nextLine();
                             System.out.print("size: ");
                             int size = scanner.nextInt();
-                            Shoes shoes = new Shoes(brand, size);
+                            Shoes shoes = new Shoes(price,brand, size);
                             shoesPackage = new Package<>(shoes);
                             shoesPackage.send();
                             break;
                         case 2:
+                            System.out.print("price: ");
+                            double flourPrice = scanner.nextInt();
                             System.out.print("name: ");
                             String name = scanner.nextLine();
                             System.out.print("weight: ");
                             double weight = scanner.nextDouble();
-                            Flour flour = new Flour(name, weight);
+                            Flour flour = new Flour(flourPrice, name, weight);
                             flourPackage = new Package<>(flour);
                             boolean sended = flourPackage.send();
-                            break;
-                        case 3:
-                            System.out.print("name: ");
-                            String catName = scanner.nextLine();
-                            Cat cat = new Cat(catName);
-                            catPackage = new Package<>(cat);
-                            catPackage.send();
                             break;
                     }
                     break;
