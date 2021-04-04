@@ -10,6 +10,7 @@ public class PackageApp {
 
         Package<Shoes> shoesPackage = null;
         Package<Flour> flourPackage = null;
+        Package<Cat> catPackage = null;
 
         int option;
         do {
@@ -41,6 +42,13 @@ public class PackageApp {
                             flourPackage = new Package<>(flour);
                             boolean sended = flourPackage.send();
                             break;
+                        case 3:
+                            System.out.print("name: ");
+                            String catName = scanner.nextLine();
+                            Cat cat = new Cat(catName);
+                            catPackage = new Package<>(cat);
+                            catPackage.send();
+                            break;
                     }
                     break;
                 case 2:
@@ -61,5 +69,6 @@ public class PackageApp {
     private static void displaySubMenu() {
         System.out.println("1 - shoes");
         System.out.println("2 - flour");
+        System.out.println("3 - cat");
     }
 }
