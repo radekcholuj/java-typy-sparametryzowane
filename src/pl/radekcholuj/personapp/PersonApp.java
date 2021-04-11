@@ -32,7 +32,7 @@ public class PersonApp {
                     System.out.println();
                     break;
 
-                case 2:
+                /*case 2:
                     scanner.nextLine();
                     System.out.print("Name: ");
                     String name1 = scanner.nextLine();
@@ -45,7 +45,7 @@ public class PersonApp {
                     Person<String, Integer> person1 = new Person<>(name1, surname1, identifier1, postalcode1);
                     System.out.print(person1);
                     break;
-
+                */
                 case 3:
                     scanner.nextLine();
                     System.out.print("Name: ");
